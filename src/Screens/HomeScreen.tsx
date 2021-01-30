@@ -1,10 +1,11 @@
 import React from 'react';
-import {FlatList, Image, View} from 'react-native';
+import {FlatList} from 'react-native';
 import {useSelector} from 'react-redux';
 import {pathOr} from 'ramda';
 import styled from 'styled-components/native';
+import {If} from 'react-if';
 
-import {Colors, Images, Metrics} from '../Themes';
+import {Colors, Metrics} from '../Themes';
 import {
   ErrorMessage,
   HomeContent,
@@ -12,7 +13,6 @@ import {
   WeatherCard,
 } from '../Components';
 import {WeatherType} from '../types';
-import {If} from 'react-if';
 import {isEmptyOrNil} from '../Utils';
 
 const HomeScreenContainer = styled.View`
