@@ -30,7 +30,6 @@ const formatWeather = (weather) => {
  * @returns
  */
 const getFormattedCityWeatherList = (response) => {
-  console.log(response)
   const weatherList = pathOr([], ['data', 'list'], response);
   return map((weather) => {
     return formatWeather(weather);
