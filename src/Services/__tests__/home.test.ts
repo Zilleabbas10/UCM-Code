@@ -77,7 +77,7 @@ const emptyResponseToTest = {
   }
 
 describe('getFormattedCityWeatherList function use-cases', () => {
-    test('return formatted weather list if response data list is not empty', () => {
+    it('should return formatted weather list if response data list is not empty', () => {
           const expectedResult = [{
             dtTxt: "2021-01-30 21:00:00",
             feelsLike: 268.23,
@@ -88,7 +88,7 @@ describe('getFormattedCityWeatherList function use-cases', () => {
           }]
         expect(HomeHelpers.getFormattedCityWeatherList(responseToTest)).toEqual(expectedResult);
     });
-    test('return formatted weather list empty if response data list is empty', () => {
+    it('should return formatted weather list empty if response data list is empty', () => {
         expect(HomeHelpers.getFormattedCityWeatherList(emptyResponseToTest)).toEqual([]);
     });
 })
